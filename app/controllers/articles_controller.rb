@@ -1,14 +1,5 @@
 class ArticlesController < ApplicationController
   before_action :set_article, only: %i[show edit update]
-  def edit
-  end
-  def update
-    if @article.update(article_params)
-      redirect_to @article, notice: "Article was successfully updated."
-    else
-      render :edit, status: :unprocessable_entity
-    end
-  end
   def new
     @article = Article.new
   end
@@ -25,6 +16,15 @@ class ArticlesController < ApplicationController
       redirect_to article_url(@article), notice: 'Article was successfully created.'
     else
       render :new, status: :unprocessable_entity
+    end
+  end
+  def edit
+  end
+  def update
+    if @article.update(article_params)
+      redirect_to @article, notice: "Article was successfully updated."
+    else
+      render :edit, status: :unprocessable_entity
     end
   end
   private
