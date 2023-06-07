@@ -21,6 +21,10 @@ group :development, :test do
   gem 'gimei'
 end
 
+group :test do
+  gem 'rspec-rails', '~> 6.0.0'
+end
+
 group :development do
   gem 'rubocop', require: false
   gem 'rubocop-performance'
