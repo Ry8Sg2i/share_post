@@ -1,6 +1,15 @@
 ---
 ja:
   activerecord:
+    models:
+        article: '記事'
+      attributes:
+        article:
+          id: 'ID'
+          title: 'タイトル'
+          content: '本文'
+          created_at: '登録日時'
+          updated_at: '更新日時'
     errors:
       messages:
         record_invalid: 'バリデーションに失敗しました: %{errors}'
